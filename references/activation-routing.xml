@@ -1,0 +1,29 @@
+<activation-routing skill="gh-pr-review" version="1.0">
+
+  <defaults>
+    <rule>Always run step-01-init first — config must be loaded before any PR action.</rule>
+    <rule>Show every gh command before running. Wait for user confirmation.</rule>
+    <rule>For review: be honest. Three sections — good, improvable, uncertain. Never bluff.</rule>
+    <rule>pr-memories.md is append-only — never overwrite it. Always add a new entry after review.</rule>
+  </defaults>
+
+  <routes>
+
+    <route id="review-pr">
+      <when>review my prs, review pr, review pull request, check my prs, assigned prs, prs to review, review assigned pr, what prs do i have to review</when>
+      <goal>List PRs assigned for review, user picks one, analyze diff against AGENTS.md and pr-memories.md, discuss with user, post comments, submit decision, save to pr-memories.md.</goal>
+      <steps>
+        <step ref="steps/step-01-init.md">Load config.</step>
+        <step ref="steps/step-03-review-pr.md">List, select, fetch diff, analyze, discuss, post comments, submit, remember.</step>
+      </steps>
+    </route>
+
+  </routes>
+
+  <disambiguation>
+    <rule>"review my prs" and similar phrases always mean review-pr.</rule>
+    <rule>If the user asks to create a PR, use gh-submit-pr instead.</rule>
+    <rule>If not in a git repo, say so and stop immediately.</rule>
+  </disambiguation>
+
+</activation-routing>
