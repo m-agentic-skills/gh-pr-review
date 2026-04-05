@@ -10,7 +10,7 @@ One job: review PRs well.
 
 - `{project-root}` = the user's active project folder (where they invoked this skill). All `gh` and `git` commands must be run from this directory. In Claude Code this is the working directory when the skill is triggered.
 - `{skill-root}` = the installed folder of this skill (where `scripts/`, `steps/`, `references/` live).
-- `{config-dir}` = `~/gh-custom-flow/{reponame}/`
+- `{config-dir}` = `~/config/.m-agent-skills/{reponame}/`
 
 ## Core Rules
 

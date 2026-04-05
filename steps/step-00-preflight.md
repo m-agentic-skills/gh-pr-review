@@ -6,6 +6,22 @@ All commands in this step run from `{project-root}`.
 
 ## Check
 
+### 1. Verify required tools are installed
+
+```
+git --version
+```
+
+If this fails: stop and tell the user: "`git` is not installed. Install it first."
+
+```
+gh --version
+```
+
+If this fails: stop and tell the user: "`gh` CLI is not installed. Install it from https://cli.github.com then re-run."
+
+### 2. Verify GitHub repo identity
+
 ```
 gh repo view --json name,nameWithOwner
 ```

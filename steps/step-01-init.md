@@ -10,7 +10,7 @@
 
 All three skills read and write to the same folder:
 ```
-~/gh-custom-flow/{reponame}/
+~/config/.m-agent-skills/{reponame}/
 ├── config.json          ← shared preferences (default_branch, deploy_workflow)
 └── pr-reviews/
     └── pr_42.md         ← one file per PR review (written by this skill)

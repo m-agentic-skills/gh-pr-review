@@ -48,7 +48,7 @@ Read the full diff. Note files changed and nature of changes.
 
 **AGENTS.md** — look in current dir and repo root. If found, read it. It defines the team's coding standards and review expectations. If not found, note it — do not invent standards.
 
-**Previous PR reviews** — check `~/gh-custom-flow/{REPO_NAME}/pr-reviews/`. If the directory exists, list the files (`pr_*.md`). Read the most recent 2–3 files to pick up recurring patterns, team preferences, and past corrections. Do not quote them verbatim — use them to inform your analysis silently. If `pr_{PR_NUMBER}.md` already exists for this PR (a previous partial review), read it first — it takes priority.
+**Previous PR reviews** — check `~/config/.m-agent-skills/{REPO_NAME}/pr-reviews/`. If the directory exists, list the files (`pr_*.md`). Read the most recent 2–3 files to pick up recurring patterns, team preferences, and past corrections. Do not quote them verbatim — use them to inform your analysis silently. If `pr_{PR_NUMBER}.md` already exists for this PR (a previous partial review), read it first — it takes priority.
 
 ---
 
@@ -144,7 +144,7 @@ gh pr review {PR_NUMBER} --comment --body "{summary}"
 
 ## Phase 8: Write PR Review File
 
-Write (or overwrite if it exists) `~/gh-custom-flow/{REPO_NAME}/pr-reviews/pr_{PR_NUMBER}.md`.
+Write (or overwrite if it exists) `~/config/.m-agent-skills/{REPO_NAME}/pr-reviews/pr_{PR_NUMBER}.md`.
 
 Create the `pr-reviews/` directory if it does not exist.
 
@@ -188,4 +188,4 @@ Full file format:
 ```
 
 Confirm to the user:
-> "Review written to `~/gh-custom-flow/{REPO_NAME}/pr-reviews/pr_{PR_NUMBER}.md`"
+> "Review written to `~/config/.m-agent-skills/{REPO_NAME}/pr-reviews/pr_{PR_NUMBER}.md`"

@@ -1,5 +1,5 @@
 """
-Read and write per-repo config at ~/gh-custom-flow/{reponame}/config.json.
+Read and write per-repo config at ~/config/.m-agent-skills/{reponame}/config.json.
 
 Usage:
     python config_helper.py read   <reponame>              # print full config JSON, or NOT_FOUND
@@ -19,7 +19,7 @@ import sys
 
 
 def config_path(reponame):
-    return pathlib.Path.home() / "gh-custom-flow" / reponame / "config.json"
+    return pathlib.Path.home() / "config" / ".m-agent-skills" / reponame / "config.json"
 
 
 def load(reponame):

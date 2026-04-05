@@ -10,12 +10,12 @@ Say "review my prs" and the skill will:
 
 1. List all PRs assigned to you for review
 2. Fetch the diff for the one you select
-3. Read local `AGENTS.md` for team standards, and `~/gh-custom-flow/{repo}/pr-reviews/` for past review notes
+3. Read local `AGENTS.md` for team standards, and `~/config/.m-agent-skills/{repo}/pr-reviews/` for past review notes
 4. Give an honest three-section analysis: what looks good, what could be improved, what it's unsure about
 5. Discuss with you — you can agree, push back, or add your own points
 6. Post comments via `gh pr comment` (shown and confirmed before each)
 7. Submit your review decision: approve, request changes, or comment
-8. Write full review notes to `~/gh-custom-flow/{repo}/pr-reviews/pr_{number}.md`
+8. Write full review notes to `~/config/.m-agent-skills/{repo}/pr-reviews/pr_{number}.md`
 
 ## Trigger phrases
 
@@ -55,7 +55,7 @@ install.cmd
 After each review, full notes are written to:
 
 ```
-~/gh-custom-flow/{reponame}/pr-reviews/pr_{number}.md
+~/config/.m-agent-skills/{reponame}/pr-reviews/pr_{number}.md
 ```
 
 These are read automatically on the next review of the same repo, so the skill learns your team's patterns over time.
@@ -69,4 +69,4 @@ These are read automatically on the next review of the same repo, so the skill l
 | **gh-pr-review** | Review pull requests |
 | [gh-deploy](../gh-deploy) | Trigger GitHub Actions deployment workflows |
 
-All four skills share `~/gh-custom-flow/{reponame}/config.json`.
+All four skills share `~/config/.m-agent-skills/{reponame}/config.json`.
